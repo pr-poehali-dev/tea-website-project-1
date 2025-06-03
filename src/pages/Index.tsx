@@ -266,7 +266,7 @@ const Index = () => {
               напитков на планете.
             </p>
             <div className="flex justify-center">
-              <Button className="bg-[#6B8E23] hover:bg-[#556B2F]">
+              <Button className="bg-pink-500 hover:bg-pink-600 rounded-full">
                 <Icon name="History" className="mr-2 h-4 w-4" />
                 Узнать больше об истории чая
               </Button>
