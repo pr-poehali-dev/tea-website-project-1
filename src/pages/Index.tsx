@@ -306,6 +306,73 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-[#F5F5DC]/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 font-montserrat text-[#8B4513] flex items-center justify-center gap-3">
+                <Icon name="HelpCircle" size={32} className="text-[#6B8E23]" />
+                Часто задаваемые вопросы
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto font-open-sans">
+                Ответы на самые популярные вопросы о чае и чаепитии
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-6">
+              {[
+                {
+                  question: "Сколько чая можно пить в день?",
+                  answer:
+                    "Здоровым взрослым рекомендуется употреблять не более 3-4 чашек чая в день. Это обеспечит получение полезных веществ без избытка кофеина.",
+                  icon: "Clock",
+                },
+                {
+                  question: "Какой чай лучше пить для здоровья?",
+                  answer:
+                    "Зелёный чай считается самым полезным благодаря высокому содержанию антиоксидантов. Белый чай также очень полезен, а травяные чаи подходят для вечернего употребления.",
+                  icon: "Leaf",
+                },
+                {
+                  question: "Как правильно заваривать чай?",
+                  answer:
+                    "Температура воды зависит от сорта: 70-80°C для зелёного чая, 85-95°C для чёрного. Время заваривания: 2-3 минуты для зелёного, 3-5 минут для чёрного чая.",
+                  icon: "Thermometer",
+                },
+              ].map((faq, index) => (
+                <Card
+                  key={index}
+                  className="border-l-4 border-l-[#6B8E23] hover:shadow-md transition-shadow"
+                >
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-3 text-[#8B4513] font-montserrat">
+                      <div className="w-10 h-10 rounded-full bg-[#6B8E23]/20 flex items-center justify-center">
+                        <Icon
+                          name={faq.icon}
+                          className="h-5 w-5 text-[#6B8E23]"
+                        />
+                      </div>
+                      {faq.question}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 font-open-sans leading-relaxed pl-13">
+                      {faq.answer}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button className="bg-[#6B8E23] hover:bg-[#556B2F] rounded-full">
+                <Icon name="MessageCircle" className="mr-2 h-4 w-4" />
+                Задать вопрос
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
