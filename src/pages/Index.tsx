@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import HoverDropdown from "@/components/HoverDropdown";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
@@ -23,12 +24,43 @@ const Index = () => {
             <Icon name="Coffee" className="h-8 w-8 text-[#8B4513]" />
           </div>
           <nav className="hidden md:flex space-x-6">
-            <a
-              href="#types"
-              className="text-gray-600 hover:text-[#6B8E23] transition-colors font-open-sans"
+            <HoverDropdown
+              trigger={
+                <a
+                  href="#types"
+                  className="text-gray-600 hover:text-[#6B8E23] transition-colors font-open-sans cursor-pointer"
+                >
+                  Виды чая
+                </a>
+              }
             >
-              Виды чая
-            </a>
+              <div className="py-1">
+                <a
+                  href="#green"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#6B8E23] transition-colors"
+                >
+                  Зелёный чай
+                </a>
+                <a
+                  href="#black"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#6B8E23] transition-colors"
+                >
+                  Чёрный чай
+                </a>
+                <a
+                  href="#oolong"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#6B8E23] transition-colors"
+                >
+                  Улун
+                </a>
+                <a
+                  href="#puer"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#6B8E23] transition-colors"
+                >
+                  Пуэр
+                </a>
+              </div>
+            </HoverDropdown>
             <a
               href="#benefits"
               className="text-gray-600 hover:text-[#6B8E23] transition-colors font-open-sans"
