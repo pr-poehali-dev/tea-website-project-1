@@ -64,7 +64,7 @@ const Index = () => {
                 настоящего чая.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#8B4513] hover:bg-[#654321] text-white">
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
                   <Icon name="BookOpen" className="mr-2 h-4 w-4" />
                   Узнать больше
                 </Button>
