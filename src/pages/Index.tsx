@@ -255,7 +255,8 @@ const Index = () => {
         {/* About Section */}
         <section id="about" className="py-16 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6 font-montserrat text-[#8B4513]">
+            <h2 className="text-3xl font-bold mb-6 font-montserrat text-[#8B4513] flex items-center justify-center gap-3">
+              <Icon name="Mail" size={32} />
               История чая
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto mb-8 font-open-sans">
